@@ -1,0 +1,18 @@
+<h2>Héroes Mavel</h2>
+<hr>
+
+<div class="card-columns">
+    <div class="card" *ngFor="let heroe of heroes let i = index">
+        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ heroe.nombre }}</h5>
+          <p class="card-text">{{ heroe.bio }}</p>
+          <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+
+          <button class="btn btn-outline-primary btn-block" (click)="verHeroe(i)">Ver Más...</button>
+
+         <!-- <a class="btn btn-outline-primary btn-block" [routerLink]="['/heroe', i]">Ver Más...</a>-->
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<h1>{{ heroe.nombre }}</h1> <small>{{ heroe.aparacion }}</small>
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid" alt="">
+        <br><br>
+        <a  class="btn btn-outline-danger btn-block" [routerLink]="['/heroes']">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ heroe.nombre }}</h3>
+        <hr>
+        <p>
+            {{ heroe.bio }}
+        </p>
+        <div *ngIf="heroe.casa == 'Marvel'">
+            Debe mostrarse la imegen
+            <img src="" alt="">
+        </div>
+    </div>
+</div>
